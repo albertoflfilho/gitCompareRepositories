@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background: #FFF;
+        background: #3366CC;
         text-rendering: optimizeLegibility !important;
         -webkit-font-smoothing: antialiased !important;
     }
