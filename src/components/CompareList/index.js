@@ -11,7 +11,10 @@ const CompareList = () => (
 
       <ul>
         <li>
-            95,019<small>starts</small>
+          95,019
+          <small>
+            starts
+          </small>
         </li>
         <li>
           95,019
