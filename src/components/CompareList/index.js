@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 import { Container, Repository } from './styles';
 
@@ -16,19 +16,19 @@ const CompareList = ({ repositories }) => (
         <ul>
           <li>
             {repository.stargazers_count}
-            <small>starts</small>
+            <small> - starts</small>
           </li>
           <li>
             {repository.forks_count}
-            <small>forks</small>
+            <small> - forks</small>
           </li>
           <li>
             {repository.open_issues_count}
-            <small>issues</small>
+            <small> - issues</small>
           </li>
           <li>
-            {repository.pushed_at}
-            <small>last commit</small>
+            {repository.lastCommit}
+            <small> - last commit</small>
           </li>
         </ul>
       </Repository>
@@ -36,19 +36,19 @@ const CompareList = ({ repositories }) => (
   </Container>
 );
 
-CompareList.PropTypes = {
-  repositories: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number,
-      name: PropTypes.string,
-      owner: PropTypes.shape({
-        login: PropTypes.string,
-        avatar_url: PropTypes.string,
+CompareList.propTypes = {
+  repositories: propTypes.arrayOf(
+    propTypes.shape({
+      id: propTypes.number,
+      name: propTypes.string,
+      owner: propTypes.shape({
+        login: propTypes.string,
+        avatar_url: propTypes.string,
       }),
-      stargazers_count: PropTypes.number,
-      forks_count: PropTypes.number,
-      open_issues_count: PropTypes.number,
-      pushed_at: PropTypes.string,
+      stargazers_count: propTypes.number,
+      forks_count: propTypes.number,
+      open_issues_count: propTypes.number,
+      lastCommit: propTypes.string,
     }).isRequired
   ),
 };
